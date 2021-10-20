@@ -3,15 +3,15 @@
 Required entities
 
 type Admin struct {
-	ID          string
-	FirstName   string
-	LastName    string
-	Country     string
-	Email       string
-	Role        string // distinguesh super-admin from admin
-  APIKey      string
-	CreatedAt   time.Time
-	UpdatedAt   time.Time
+	ID        string
+	FirstName string
+	LastName  string
+	Country   string
+	Email     string
+	Role      string // distinguesh super-admin from admin
+	APIKey    string
+	CreatedAt time.Time
+	UpdatedAt time.Time
 }
 
 type User struct {
@@ -21,8 +21,8 @@ type User struct {
 	Country       string
 	Email         string
 	Nickname      string
-  Phonenumber   string
-  SlackUsername string
+	Phonenumber   string
+	SlackUsername string
 	CreatedAt     time.Time
 	UpdatedAt     time.Time
 }
@@ -31,14 +31,15 @@ type Notification struct {
 	ID              string
 	Title           string
 	Description     string
-  Destination     string
-  NotifyAt        time.Time  // Updated every time after successful notification
-  Frequency       int64 // The frequency gap in seconds
-  AcknowledgeLink string
-  AuthenticatedBy string
+	Destination     string
+	NotifyAt        time.Time // Updated every time after successful notification
+	Frequency       int64     // The frequency gap in seconds
+	AcknowledgeLink string
+	AuthenticatedBy string
 	CreatedAt       time.Time
 	UpdatedAt       time.Time
 }
+
 
 
 Required endpoints
